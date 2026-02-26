@@ -1,0 +1,60 @@
+body {
+    font-family: 'JetBrains Mono';
+    background-color: black;
+    margin: 0;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+#slideshow {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    overflow: hiden;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+}
+
+#cards {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 100vh;
+
+    /* overflow: overlay; */
+    scroll-snap-type: x mandatory;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    aspect-ratio: 1;
+    scroll-snap-align: center;
+    /* justify-content: center; */
+    /* border-color: white; */
+    /* border-style: solid; */
+    /* border-width: 1px; */
+    /* box-shadow: 0 30px 50px #dbdbdb; */
+}
+
+#card #image {
+    width: 180px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#card #time {
+    text-align: center;
+    font-size: 0.90em;
+    padding: 10px;
+    width: 100px;
+    color: white;
+}
+
