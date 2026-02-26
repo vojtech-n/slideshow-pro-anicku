@@ -185,7 +185,14 @@ body {
 }
 
 @media (max-width: 750px) {
+  .slider {
+    padding-left: calc(50vw - 140px);
+  }
+
   .slider .wrapper {
     --vis-s: 1;
+    transform: translateX(
+      calc(-1 * (280px + var(--gap)) * (var(--curr-s) - 1))
+    );
   }
 }

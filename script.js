@@ -3,6 +3,18 @@
 let cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
+    card.addEventListener('click', function() {
+        this.focus();
+    });
+});
+
+document.querySelector('.slider').addEventListener('click', function(e) {
+    if (!e.target.closest('.card')) {
+        document.activeElement?.blur();
+    }
+});
+
+cards.forEach(card => {
     const timeElement = card.querySelector("time");
     const date = new Date(timeElement.getAttribute("datetime"));
     if (date > Date.now()) {
