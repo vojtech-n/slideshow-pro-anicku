@@ -1,6 +1,30 @@
 "use strict"
 
 let cards = document.querySelectorAll(".card");
+let styleSheet = document.createElement("style");
+console.log(cards.length)
+
+for (let i = 2; i <= cards.length; i++) {
+    // Detect number of slides:
+    let numberOfSlides = `
+        .slider .wrapper:has(.card:nth-child(${i})) {
+            --tot-s: ${i};
+        }
+    `
+    styleSheet.textContent += numberOfSlides
+    document.head.appendChild(styleSheet)
+}
+
+for (let i = 1; i <= cards.length; i++) {
+    // Detect current slide
+    let currentSlide = `
+        .slider .wrapper:has(.card:nth-child(${i}):focus) {
+            --curr-s: ${i};
+        }
+    `
+    styleSheet.textContent += currentSlide
+    document.head.appendChild(styleSheet)
+}
 
 cards.forEach(card => {
     card.addEventListener('click', function() {
