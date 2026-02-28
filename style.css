@@ -17,7 +17,7 @@ body {
 
 .slider .wrapper {
   display: flex;
-
+  /* flex-direction: row-reverse; */
   --gap: 1vmin;
   --tot-s: 1; /* defaults */
   --vis-s: min(6, var(--tot-s)); /* defaults */
@@ -53,6 +53,7 @@ body {
   transform: scale(0.9);
   transition-property: transform;
   transition-duration: 0.5s;
+  height: auto;
 }
 
 .card img {
@@ -72,8 +73,11 @@ body {
 
 .card p {
   font-size: 0.75em;
-  /* width: 100px; */
+  /* width: 270px; */
   color: white;
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
 }
 
 .slider:not(:has(.card:focus)) .card:first-child,
